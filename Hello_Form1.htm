@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/Form.js"> </script>
+</head>
+
+<body onload="init()">
+
+ <form id="f" action="action_page.php" method="post"> 
+<!--<form action="Hello_Form.php" method="post">-->
+
+
+Incident Type:<br>
+<select name="type">
+<option value="volvo">Dog Poop</option>
+<option value="saab">Pooping Dog</option>
+<option value="fiat">Loose Dog</option>
+<option value="audi">Agressive Dog</option>
+</select>
+<br>
+Comments:<br>
+<textarea name="message" rows="5" cols="30">
+Describe the incident
+</textarea>
+<br><br>
+<button type="button" onclick="upload()">Upload Image</button><br><br>
+Latitude:<div id="lat"></div>
+Longitude:<div id="lon"></div>
+<br><br>
+<button type="button" onclick="closeWin()">Cancel</button>
+<input type="submit" value="Submit">
+</form> 
+
+
+
+</body>
+</html>

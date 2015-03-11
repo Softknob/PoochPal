@@ -1,0 +1,28 @@
+html, body, #wrapper{
+    height: 100%;
+    width: 100%;
+}
+#header{
+    height: 100px; //or whatever. Note px not %.
+    width: 100%;
+}
+#footer{
+    height: 100px; //or whatever. Note px not %.
+    width: 100%;
+}
+#map-canvas{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 50px;
+    right: 0;
+
+}
+#map{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 50px;
+    right: 0;
+
+}
