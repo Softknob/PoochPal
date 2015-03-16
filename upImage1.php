@@ -4,10 +4,10 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $target_file = $target_dir . "kitten1.jpg";
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-$servername = "localhost";
-$username = "testU";
-$password = "test";
-$dbname = "rdp";
+$servername = 
+$username = 
+$password = 
+$dbname = 
 
 /// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

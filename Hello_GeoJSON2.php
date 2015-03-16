@@ -2,10 +2,10 @@
 
 <?php
 
-$servername = "localhost";
-$username = "testU";
-$password = "test";
-$dbname = "rdp";
+$servername = 
+$username = 
+$password = 
+$dbname = 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
