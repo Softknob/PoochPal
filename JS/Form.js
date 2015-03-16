@@ -3,21 +3,31 @@ function init() {
 	
 	var param=self.location.search;
 	console.log(param);
-/* 	var latStart =param.indexOf("=")+1;
-	console.log(latStart);
-	var lonStart =param.indexOf(",")+1;
-	console.log(lonStart);
-	var lat =param.substring(latStart,lonStart-2); */
+	
+	//set time stamp
+	var now=new Date();
+	var dateNow= now.getYear();
+	dateNow+=1900;
+	dateNow+="-"+now.getMonth();
+	dateNow+="-"+now.getDate();
+	dateNow+=" "+now.getHours();
+	dateNow+=":"+now.getMinutes();
+	dateNow+=":"+now.getSeconds();
+	//set coordinates
 	var paramSplit = param.split(",");
 	console.log("latitude: "+paramSplit[1]);
 	console.log("longitude: "+paramSplit[2]);
-	document.getElementById("lat").innerHTML=paramSplit[1];
-	document.getElementById("lon").innerHTML=paramSplit[2];
+	console.log("Date/time: "+dateNow);
+	
+	//set Hidden values on form
+	document.getElementById("lat").value=paramSplit[1];
+	document.getElementById("lon").value=paramSplit[2];
+	document.getElementById("time").value=dateNow;
+
 	
 }
-function upload(){
-	alert("still working on this");
-}
+
+
 function closeWin(){
 	self.close(); 
 }

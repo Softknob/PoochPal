@@ -6,29 +6,36 @@
 
 <body onload="init()">
 
- <form id="f" action="action_page.php" method="post"> 
+ <form id="f" action="upImage1.php" method="post" enctype="multipart/form-data"> 
 <!--<form action="Hello_Form.php" method="post">-->
 
 
 Incident Type:<br>
 <select name="type">
-<option value="volvo">Dog Poop</option>
-<option value="saab">Pooping Dog</option>
-<option value="fiat">Loose Dog</option>
-<option value="audi">Agressive Dog</option>
+<option value="poop">Dog Poop</option>
+<option value="pooping">Pooping Dog</option>
+<option value="loose">Loose Dog</option>
+<option value="agressive">Agressive Dog</option>
 </select>
-<br>
+<br><br>
 Comments:<br>
 <textarea name="message" rows="5" cols="30">
-Describe the incident
 </textarea>
 <br><br>
-<button type="button" onclick="upload()">Upload Image</button><br><br>
-Latitude:<div id="lat"></div>
-Longitude:<div id="lon"></div>
+Upload image:<br>
+<input type="file" name="fileToUpload" id="fileToUpload">
+
+<input type="hidden" id="lat" name="lat">
+<input type="hidden" id="lon" name="lon">
+<input type="hidden" id="time" name="time">
 <br><br>
-<button type="button" onclick="closeWin()">Cancel</button>
-<input type="submit" value="Submit">
+User Name:<br>
+<input type="text" name="user" >
+<br>
+<br><br>
+<button type="button" onclick="closeWin()">Cancel</button> 
+
+<input type="submit" value="SUBMIT" name="submit">
 </form> 
 
 

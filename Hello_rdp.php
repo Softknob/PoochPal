@@ -14,10 +14,10 @@
 ?>
 
 <?php
-$servername = 
-$username = 
-$password = 
-$dbname = 
+$servername = "localhost";
+$username = "testU";
+$password = "test";
+$dbname = "rdp";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -42,10 +42,11 @@ if ($result->num_rows > 0) {
         echo  $row["pk"].", "
 		.$row["lat"]. ", "
 		.$row["lon"]. ", "
-		.$row["timestamp"]. ", "
+		.$row["userName"]. ", "
+		.$row["timeStamp"]. ", "
 		.$row["imageURL"]. ", "
-		.$row["Details"]. ", "
-		.$row["Incident_type"]. "<br>";
+		.$row["details"]. ", "
+		.$row["incidentType"]. "<br>";
         //echo "dogs ". "<br>";
     }
 }else {
