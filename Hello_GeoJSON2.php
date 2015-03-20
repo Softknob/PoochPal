@@ -2,10 +2,10 @@
 
 <?php
 
-$servername = 
-$username = 
-$password = 
-$dbname = 
+$servername = "localhost";
+$username = "testU";
+$password = "test";
+$dbname = "rdp";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -42,9 +42,9 @@ $feature = array(
         # Pass other attribute columns here
         'properties' => array(
             'Details' => $row['details'],
-			'URL' => $row['imageURL']
-       //     'description' => $row['Description'],
-       //     'sector' => $row['Sector'],
+			'URL' => $row['imageURL'],
+            'incident' => $row['incidentType'],
+            'time' => $row['timeStamp']
         //    'country' => $row['Country'],
         //    'status' => $row['Status'],
         //    'start_date' => $row['Start Date'],

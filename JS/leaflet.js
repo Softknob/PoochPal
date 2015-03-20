@@ -30,16 +30,23 @@ function init() {
 function popUp(f,l){
     var out = [];
 	var URL;
+	var title;
+	var date;
 	var popMsg;
     if (f.properties){
         for(key in f.properties){
 			if(key=="URL")URL =f.properties[key];
+			else if(key=="incident")title =f.properties[key];
+			else if(key=="time")date =f.properties[key].substring(0,10);
 			//else out.push(key+": "+f.properties[key]);
-			else out.push(f.properties[key]);
+			else out.push(f.properties[key]+ "<br>");
+
         }
-		popMsg="<img src='image/" + URL +"' style='width:304px;height:228px'>";
+		popMsg="<h3>" + title + " Dog </h3>"
+		popMsg+="<img src='image/" + URL +"' style='width:304px;height:228px'>";
 		popMsg += "<br><br>";
 		popMsg += out;
+		popMsg += "<br>"+date;
 		l.bindPopup(popMsg);
 		
         //console.log(out.join()+ "<br /><img src='image/dog1.jpg' style='width:304px;height:228px'>");
