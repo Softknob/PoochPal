@@ -2,6 +2,7 @@
 function init() {
                
 	var map = L.map('map').setView([49.077689,-117.799186], 15);
+	var serverIP = "http://23.16.194.45:8088";
 	L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 	maxZoom: 18,
 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
@@ -9,7 +10,8 @@ function init() {
 	'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 	id: 'examples.map-i875mjb7'
 	}).addTo(map);
-	var geojsonLayer = new L.GeoJSON.AJAX("Hello_GeoJSON2.php",{onEachFeature:popUp}).addTo(map);
+	//var geojsonLayer = new L.GeoJSON.AJAX("Hello_GeoJSON2.php",{onEachFeature:popUp}).addTo(map);
+	var geojsonLayer = new L.GeoJSON.AJAX(serverIP +"/Hello_GeoJSON2.php",{onEachFeature:popUp}).addTo(map);
 	map.doubleClickZoom.disable(); 
 	map.on('dblclick', onMapClick);
 

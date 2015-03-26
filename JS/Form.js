@@ -8,7 +8,7 @@ function init() {
 	var now=new Date();
 	var dateNow= now.getYear();
 	dateNow+=1900;
-	dateNow+="-"+now.getMonth();
+	dateNow+="-"+(now.getMonth()+1);
 	dateNow+="-"+now.getDate();
 	dateNow+=" "+now.getHours();
 	dateNow+=":"+now.getMinutes();
