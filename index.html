@@ -2,40 +2,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Leaflet mobile example</title>
+<title>Leaflet mobile example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="css/leaflet.css" />
+<script src="js/leaflet.js"></script>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-	<link rel="stylesheet" href="css/leaflet.css" />
-
-	<script src="js/leaflet.js"></script>
-
-	<style>
-		body {
-			padding: 0;
-			margin: 0;
-		}
-		html, body, #map {
-			height: 100%;
-		}
-	</style>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+<style>
+body {
+padding: 0;
+margin: 0;
+}
+html, body, #map {
+height: 100%;
+}
+</style>
 </head>
 <body>
-	<div id="map"></div>
+<div id="map"></div>
+<script>
+/* var map = new L.Map('map');
+L.mapbox.accessToken = 'pk.eyJ1IjoidHNoZWRkZW4iLCJhIjoiZ0JqSEZZOCJ9.SvG_pf5k7k1Kb2tL4shzLA';
+var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+//var osmUrl ='https://{s}.tiles.mapbox.com/v4/tshedden.lc214p7m/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken
+var osmAttrib = 'Map data © OpenStreetMap contributors';
+var osm = new L.TileLayer(osmUrl, { attribution: osmAttrib });
+map.setView(new L.LatLng(49.077689,-117.799186), 15);
+map.addLayer(osm); */
 
-	<script>
-	var map = new L.Map('map');
-	L.mapbox.accessToken = 'pk.eyJ1IjoidHNoZWRkZW4iLCJhIjoiZ0JqSEZZOCJ9.SvG_pf5k7k1Kb2tL4shzLA';
-
-    //var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    var osmUrl ='https://{s}.tiles.mapbox.com/v4/tshedden.lc214p7m/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken
-    var osmAttrib = 'Map data © OpenStreetMap contributors';
-    var osm = new L.TileLayer(osmUrl, { attribution: osmAttrib });
-
-    map.setView(new L.LatLng(49.077689,-117.799186), 15);
-    map.addLayer(osm);
-
+var map = L.map('map').setView([49.079, -117.805], 15);
 		
-	</script>
+		L.mapbox.accessToken = 'pk.eyJ1IjoidHNoZWRkZW4iLCJhIjoiZ0JqSEZZOCJ9.SvG_pf5k7k1Kb2tL4shzLA';
+		// Replace 'examples.map-i87786ca' with your map id.
+		var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/tshedden.lc214p7m/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+			attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+		}).addTo(map);
+</script>
 </body>
 </html>
