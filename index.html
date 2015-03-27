@@ -25,8 +25,10 @@
 
 	<script>
 	var map = new L.Map('map');
+	L.mapbox.accessToken = 'pk.eyJ1IjoidHNoZWRkZW4iLCJhIjoiZ0JqSEZZOCJ9.SvG_pf5k7k1Kb2tL4shzLA';
 
-    var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    //var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmUrl ='https://{s}.tiles.mapbox.com/v4/tshedden.lc214p7m/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken
     var osmAttrib = 'Map data © OpenStreetMap contributors';
     var osm = new L.TileLayer(osmUrl, { attribution: osmAttrib });
 
