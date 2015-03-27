@@ -24,15 +24,14 @@
 	<div id="map"></div>
 
 	<script>
-		var map = L.map('map').setView([49.077689,-117.799186], 15);
+	var map = new L.Map('map');
 
-		L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-			id: 'examples.map-i875mjb7'
-		}).addTo(map);
+    var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttrib = 'Map data © OpenStreetMap contributors';
+    var osm = new L.TileLayer(osmUrl, { attribution: osmAttrib });
+
+    map.setView(new L.LatLng(49.077689,-117.799186), 15);
+    map.addLayer(osm);
 
 		
 	</script>
